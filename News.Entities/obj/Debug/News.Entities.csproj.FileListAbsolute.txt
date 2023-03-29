@@ -1,0 +1,13 @@
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\News.Entities.dll
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\News.Entities.pdb
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\News.DAL.dll
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\News.Model.dll
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\System.Data.SqlClient.dll
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\News.DAL.pdb
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\News.Model.pdb
+C:\Users\achiy\source\repos\News\News.Entities\bin\Debug\System.Data.SqlClient.xml
+C:\Users\achiy\source\repos\News\News.Entities\obj\Debug\News.Entities.csproj.AssemblyReference.cache
+C:\Users\achiy\source\repos\News\News.Entities\obj\Debug\News.Entities.csproj.CoreCompileInputs.cache
+C:\Users\achiy\source\repos\News\News.Entities\obj\Debug\News.Entities.csproj.CopyComplete
+C:\Users\achiy\source\repos\News\News.Entities\obj\Debug\News.Entities.dll
+C:\Users\achiy\source\repos\News\News.Entities\obj\Debug\News.Entities.pdb

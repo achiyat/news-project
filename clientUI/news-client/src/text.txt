@@ -1,0 +1,67 @@
+import { useAuth0 } from "@auth0/auth0-react";
+import React, { useContext, useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
+import { MyCategoryContext } from "../../Context/context";
+import { getUserById, saveUser } from "../../services/services";
+import { Navbar } from "../Navbar/navbar";
+import { RouterComponent } from "../RouterComponent/routerComponent";
+
+export const Welcome = () => {
+  const { user } = useAuth0();
+  //const { MyCategory } = useContext(MyCategoryContext);
+  const [Category] = useState(["", "", ""]);
+
+  const initData = async () => {
+    console.log("user");
+    let message = await saveUser(user.sub, user.email);
+    console.log(message);
+    const Categories = await getUserById(user.sub);
+    console.log(Categories);
+
+    //Category[0] = Categories.category1;
+    //Category[1] = Categories.category2;
+    //Category[2] = Categories.category3;
+
+    if (Categories.category1 !== "null") Category[0] = Categories.category1;
+    if (Categories.category2 !== "null") Category[1] = Categories.category2;
+    if (Categories.category3 !== "null") Category[2] = Categories.category3;
+    console.log(Category);
+    //if ((message = "ok")) return Navigate("/User/settings");
+  };
+
+  useEffect(() => {
+    initData();
+  }, [Category]);
+
+  return (
+    <>
+      <Navbar
+        Category1={Category[0]}
+        Category2={Category[1]}
+        Category3={Category[2]}
+      />
+      <RouterComponent />
+    </>
+  );
+};
+
+// if (MyCategory.length > 0) {
+//   return (
+//     <>
+//       <Navbar
+//         Category1={MyCategory[0] != undefined ? MyCategory[0] : ""}
+//         Category2={MyCategory[1] != undefined ? MyCategory[1] : ""}
+//         Category3={MyCategory[2] != undefined ? MyCategory[2] : ""}
+//       />
+//       <RouterComponent />
+//     </>
+//   );
+// } else {
+//   return (
+//     <>
+//       <Navbar Category1="" Category2="" Category3="" />
+//       <RouterComponent />
+//     </>
+//   );
+// }
+// };

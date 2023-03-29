@@ -1,0 +1,9 @@
+C:\Users\achiy\source\repos\News\Utilities\bin\Debug\Utilities.dll
+C:\Users\achiy\source\repos\News\Utilities\bin\Debug\Utilities.pdb
+C:\Users\achiy\source\repos\News\Utilities\bin\Debug\News.DAL.dll
+C:\Users\achiy\source\repos\News\Utilities\bin\Debug\News.DAL.pdb
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\Utilities.csproj.AssemblyReference.cache
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\Utilities.csproj.CopyComplete
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\Utilities.dll
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\Utilities.pdb

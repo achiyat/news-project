@@ -1,0 +1,6 @@
+C:\Users\achiy\source\repos\News\News.DAL\bin\Debug\News.DAL.dll
+C:\Users\achiy\source\repos\News\News.DAL\bin\Debug\News.DAL.pdb
+C:\Users\achiy\source\repos\News\News.DAL\obj\Debug\News.DAL.csproj.AssemblyReference.cache
+C:\Users\achiy\source\repos\News\News.DAL\obj\Debug\News.DAL.csproj.CoreCompileInputs.cache
+C:\Users\achiy\source\repos\News\News.DAL\obj\Debug\News.DAL.dll
+C:\Users\achiy\source\repos\News\News.DAL\obj\Debug\News.DAL.pdb

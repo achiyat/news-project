@@ -1,0 +1,4 @@
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\News.Utilities.csproj.AssemblyReference.cache
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\News.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\Utilities.dll
+C:\Users\achiy\source\repos\News\Utilities\obj\Debug\Utilities.pdb

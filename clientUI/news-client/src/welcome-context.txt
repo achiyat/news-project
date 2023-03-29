@@ -1,0 +1,146 @@
+import { useAuth0 } from "@auth0/auth0-react";
+import React, { useContext, useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
+import { MyCategoryContext } from "../../Context/context";
+import { getUserById, saveUser } from "../../services/services";
+import { Navbar } from "../Navbar/navbar";
+import { RouterComponent } from "../RouterComponent/routerComponent";
+
+export const Welcome = () => {
+  const { user } = useAuth0();
+  const {
+    MyCategory = [],
+    setMyCategory,
+    Mysave,
+    setMysave,
+  } = useContext(MyCategoryContext);
+  const [Category] = useState(["", "", ""]);
+
+  const initData = async () => {
+    const Categories = await getUserById(user.sub);
+    console.log(Categories);
+
+    if (Categories.category1 !== "null") Category[0] = Categories.category1;
+    if (Categories.category2 !== "null") Category[1] = Categories.category2;
+    if (Categories.category3 !== "null") Category[2] = Categories.category3;
+    setMysave(false);
+    setMyCategory(Categories);
+    console.log(Category);
+  };
+
+  const saveUserId = async () => {
+    console.log("user");
+    let message = await saveUser(user.sub, user.email);
+    console.log(message);
+    //if ((message = "ok")) return Navigate("/User/settings");
+  };
+  console.log(1);
+
+  useEffect(() => {
+    initData();
+    saveUserId();
+  }, [Mysave]);
+
+  return (
+    <>
+      <Navbar
+        Category1={MyCategory[0]}
+        Category2={MyCategory[1]}
+        Category3={MyCategory[2]}
+      />
+      <RouterComponent />
+    </>
+  );
+};
+
+export const Settings = () => {
+  const [AllCategory, setAllCategory] = useState([]);
+  const {
+    MyCategory = [],
+    setMyCategory,
+    Mysave,
+    setMysave,
+  } = useContext(MyCategoryContext);
+  const [selectedCategories, setselectedCategories] = useState([]);
+  const { user } = useAuth0();
+
+  const initData = async () => {
+    let Categories = await getCategoriesData();
+    let CategoryObject = Object.values(Categories);
+    console.log(CategoryObject);
+    setAllCategory(CategoryObject);
+  };
+
+  const handleCategorySelection = (event) => {
+    const category = event.target.value;
+    if (event.target.checked) {
+      setselectedCategories([...selectedCategories, category]);
+      setMyCategory([...MyCategory, category]);
+      setMysave(true);
+      saveselectedCategories([...selectedCategories, category]);
+    } else {
+      setselectedCategories(selectedCategories.filter((c) => c !== category));
+      setMyCategory(MyCategory.filter((c) => c !== category));
+      setMysave(true);
+      saveselectedCategories(selectedCategories.filter((c) => c !== category));
+    }
+    console.log("selectedCategories", selectedCategories);
+    console.log("MyCategory", MyCategory);
+  };
+
+  const saveselectedCategories = (categories) => {
+    console.log(user.sub, categories);
+    saveCategory(user.sub, categories);
+  };
+
+  const getFromServer = async () => {
+    const response = await getCategoryOfUser(user.sub);
+    const { category1, category2, category3 } = response;
+
+    const categoriesToAdd = [];
+    if (Array.isArray(MyCategory)) categoriesToAdd.push(...MyCategory);
+    if (category1) categoriesToAdd.push(category1);
+    if (category2) categoriesToAdd.push(category2);
+    if (category3) categoriesToAdd.push(category3);
+
+    setselectedCategories([...selectedCategories, ...categoriesToAdd]);
+    setMyCategory([...MyCategory, ...categoriesToAdd]);
+    setMysave(true);
+
+    console.log("selectedCategories", selectedCategories);
+    console.log("MyCategory", MyCategory);
+  };
+
+  useEffect(() => {
+    initData();
+    getFromServer();
+  }, []);
+
+  return (
+    <div className="container">
+      <h1>בחר עד 3 קטגוריות</h1>
+      <form>
+        {AllCategory.map((category) => (
+          <div key={category} className="form-check">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value={category}
+              id={category}
+              onChange={handleCategorySelection}
+              checked={selectedCategories.includes(category)}
+              disabled={
+                selectedCategories.length === 3 &&
+                !selectedCategories.includes(category)
+              }
+            />
+            <label className="form-check-label" htmlFor={category}>
+              {category}
+            </label>
+          </div>
+        ))}
+      </form>
+      <p>Selected categories: {selectedCategories.join(", ")}</p>
+    </div>
+  );
+};

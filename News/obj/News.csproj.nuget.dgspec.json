@@ -1,0 +1,139 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\achiy\\source\\repos\\News\\News\\News.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\achiy\\source\\repos\\News\\News.DAL\\News.DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\achiy\\source\\repos\\News\\News.DAL\\News.DAL.csproj",
+        "projectName": "News.DAL",
+        "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News.DAL\\News.DAL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\achiy\\source\\repos\\News\\News.Entities\\News.Entities.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\achiy\\source\\repos\\News\\News.Entities\\News.Entities.csproj",
+        "projectName": "News.Entities",
+        "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News.Entities\\News.Entities.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\achiy\\source\\repos\\News\\News.DAL\\News.DAL.csproj": {
+                "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News.DAL\\News.DAL.csproj"
+              },
+              "C:\\Users\\achiy\\source\\repos\\News\\News.Model\\News.Model.csproj": {
+                "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News.Model\\News.Model.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\achiy\\source\\repos\\News\\News.Model\\News.Model.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\achiy\\source\\repos\\News\\News.Model\\News.Model.csproj",
+        "projectName": "News.Model",
+        "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News.Model\\News.Model.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\achiy\\source\\repos\\News\\News\\News.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\achiy\\source\\repos\\News\\News\\News.csproj",
+        "projectName": "News",
+        "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News\\News.csproj",
+        "packagesPath": "C:\\Users\\achiy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\achiy\\source\\repos\\News\\News\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\achiy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\achiy\\source\\repos\\News\\News.Entities\\News.Entities.csproj": {
+                "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News.Entities\\News.Entities.csproj"
+              },
+              "C:\\Users\\achiy\\source\\repos\\News\\News.Model\\News.Model.csproj": {
+                "projectPath": "C:\\Users\\achiy\\source\\repos\\News\\News.Model\\News.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

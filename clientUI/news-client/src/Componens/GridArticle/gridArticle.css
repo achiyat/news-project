@@ -1,0 +1,43 @@
+.flexbox-conteiner5 {
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 30% 70%;
+  grid-template-areas:
+    "header main"
+    "sidebar main"
+    "footer main";
+  gap: 5px;
+}
+
+.img-grid-big {
+  height: 600px;
+  width: 100%;
+}
+
+.img-grid-small {
+  height: 200px;
+  width: 100%;
+}
+
+.box-grid-radius {
+  border-radius: 25px;
+}
+
+.grid-header {
+  grid-area: header;
+  /* background-color: lightblue; */
+}
+
+.grid-main {
+  grid-area: main;
+  /* background-color: yellow; */
+}
+
+.grid-sidebar {
+  grid-area: sidebar;
+  /* background-color: brown; */
+}
+.grid-footer {
+  grid-area: footer;
+  /* background-color: blueviolet; */
+}
